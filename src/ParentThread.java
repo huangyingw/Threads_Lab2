@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -21,7 +20,6 @@ public class ParentThread extends Thread {
 	}
 
 	public void run() {
-
 		Thread fib = new FibThread(num, data);
 		fib.start();
 		System.out.println("fib is start....");
