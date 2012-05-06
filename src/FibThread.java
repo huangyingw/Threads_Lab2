@@ -32,7 +32,9 @@ public class FibThread extends Thread {
 	}
 
 	public void run() {
-		Fib();
-		System.out.println(this);
+		synchronized (this) {
+			Fib();
+			notify();
+		}
 	}
 }
