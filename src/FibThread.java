@@ -13,20 +13,12 @@ public class FibThread extends Thread {
 
 	public void Fib() {
 		data.add((long) 0);
-		if (num == 1)
-			data.add((long) 0);
-		if (num < 4 && num > 1)
-			data.add((long) 1);
-		else {
-			long a = 0;
-			long b = 1;
-			for (int i = 0; i < num-1; i++) {
-				b = a + b;
-				a = b - a;
-				// System.out.println("a = " + a + "  b = " + b);
-				data.add((long) a);
-			}
-
+		long a = 0;
+		long b = 1;
+		for (int i = 0; i < num - 1; i++) {
+			b = a + b;
+			a = b - a;
+			data.add((long) a);
 		}
 	}
 
