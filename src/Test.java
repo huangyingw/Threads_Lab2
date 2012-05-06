@@ -1,18 +1,21 @@
 class Test {
 	public static void main(String[] args) {
-		ThreadB b = new ThreadB();
-		b.start();
-		System.out.println("b is start....");
-		synchronized (b)// 括号里的b是什么意思,起什么作用?
-		{
-			try {
-				System.out.println("Waiting for b to complete...");
-				b.wait();// 这一句是什么意思，究竟让谁wait?
-				System.out.println("Completed.Now back to main thread");
-			} catch (InterruptedException e) {
-			}
-		}
-		System.out.println("Total is :" + b.total);
+		Thread fib = new FibThread(6);
+		// 0,1,1,2,3,5
+		fib.start();
+		// ThreadB b = new ThreadB();
+		// b.start();
+		// System.out.println("b is start....");
+		// synchronized (b)// 括号里的b是什么意思,起什么作用?
+		// {
+		// try {
+		// System.out.println("Waiting for b to complete...");
+		// b.wait();// 这一句是什么意思，究竟让谁wait?
+		// System.out.println("Completed.Now back to main thread");
+		// } catch (InterruptedException e) {
+		// }
+		// }
+		// System.out.println("Total is :" + b.total);
 	}
 }
 
