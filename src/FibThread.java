@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -6,9 +5,10 @@ public class FibThread extends Thread {
 	int num;
 	private List<Long> data;
 
-	FibThread(int num) {
+	FibThread(int num, List<Long> data) {
 		this.num = num;
-		data = new ArrayList<Long>();
+		this.data = data;
+
 	}
 
 	public void Fib() {
