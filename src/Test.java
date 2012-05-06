@@ -1,6 +1,6 @@
 public class Test {
 	public static void main(String[] args) {
-		FibThread p = new FibThread(100);
-		p.start();
+		ParentThread pa = new ParentThread(100);
+		pa.start();
 	}
 }
