@@ -1,8 +1,8 @@
 class Test {
 	public static void main(String[] args) {
 		Thread fib = new FibThread(6);
-		// 0,1,1,2,3,5
 		fib.start();
+		// 0,1,1,2,3,5
 		// ThreadB b = new ThreadB();
 		// b.start();
 		// System.out.println("b is start....");

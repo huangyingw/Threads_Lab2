@@ -6,7 +6,9 @@ public class FibThread extends Thread {
 	}
 
 	public long Fib() {
-		if (num < 4)
+		if (num == 1)
+			return 0;
+		if (num < 4 && num > 1)
 			return 1;
 		else {
 			long a = 1;
@@ -14,7 +16,7 @@ public class FibThread extends Thread {
 			for (int i = 2; i < num; i++) {
 				b = a + b;
 				a = b - a;
-				System.out.println("a = " + a + "  b = " + b);
+				// System.out.println("a = " + a + "  b = " + b);
 			}
 			return a;
 		}
